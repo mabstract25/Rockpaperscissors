@@ -1,0 +1,18 @@
+
+// Create a new function named getComputerChoice
+function getComputerChoice() {
+    let choice = Math.random();
+    choice = Math.round(choice * 10) / 10
+    console.log(choice);
+    if (choice >= 0.1 && choice <= 0.3) {
+        console.log("Rock");
+    } else if (choice >= 0.4 && choice <= 0.6) {
+        console.log("Paper");
+    } else {
+        console.log("Scissors");
+    }
+}
+
+
+
+// Function returns a random Rock, Paper or Scissors
