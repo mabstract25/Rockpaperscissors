@@ -12,7 +12,11 @@ function getComputerChoice() {
         console.log("Scissors");
     }
 }
-
-
-
 // Function returns a random Rock, Paper or Scissors
+// Create a new function named getHumanChoice
+// Prompt method that loads on page load
+// Take whatever score is entered
+// Run computer choice
+
+
+
