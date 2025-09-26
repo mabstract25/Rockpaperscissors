@@ -2,16 +2,19 @@ let humanScore = 0;
 let computerScore = 0;
 
 
-// function playRound(humanChoice, computerChoice) {
-    
-// }
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice === computerChoice) {
+        console.log("DRAW!");
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
+        console.log("WIN!");
+    };
+}
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-console.log(computerSelection);
-
-// playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection);
 
 
 // Create a new function named getComputerChoice
