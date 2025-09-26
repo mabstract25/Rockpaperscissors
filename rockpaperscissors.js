@@ -4,12 +4,41 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
-    if (humanChoice === computerChoice) {
-        console.log("DRAW!");
-    } else if (humanChoice === "paper" && computerChoice === "rock") {
-        console.log("WIN!");
+    if (humanChoice === "paper") {
+        if (computerChoice === "paper") {
+            console.log("DRAW!");
+        }
+        if (computerChoice === "rock") {
+            console.log("WIN!");
+        }
+        if (computerChoice === "scissors") {
+            console.log("LOSE!");
+        }
+    } else if (humanChoice === "rock") {
+
+        if (computerChoice === "paper") {
+            console.log("LOSE!");
+        }
+        if (computerChoice === "rock") {
+            console.log("DRAW!");
+        }
+        if (computerChoice === "scissors") {
+            console.log("WIN!");
+        }
+    } else if (humanChoice === "scissors") {
+
+        if (computerChoice === "paper") {
+            console.log("WIN!");
+        }
+        if (computerChoice === "rock") {
+            console.log("LOSE!");
+        }
+        if (computerChoice === "scissors") {
+            console.log("DRAW!");
+        }
+    } else {};
     };
-}
+
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
@@ -43,7 +72,3 @@ function getHumanChoice() {
 // Prompt method that loads on page load
 // Take whatever score is entered
 // Run computer choice
-
-
-
-
