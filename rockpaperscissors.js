@@ -13,7 +13,12 @@ function getComputerChoice() {
     }
 }
 // Function returns a random Rock, Paper or Scissors
+
 // Create a new function named getHumanChoice
+function getHumanChoice() {
+    let choice2 = prompt("Choose Your Weapon: Rock, Paper or Scissors?");
+    console.log(choice2);
+}
 // Prompt method that loads on page load
 // Take whatever score is entered
 // Run computer choice
