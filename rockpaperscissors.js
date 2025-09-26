@@ -1,3 +1,5 @@
+let humanScore = 0;
+let computerScore = 0;
 
 // Create a new function named getComputerChoice
 function getComputerChoice() {
@@ -22,6 +24,5 @@ function getHumanChoice() {
 // Prompt method that loads on page load
 // Take whatever score is entered
 // Run computer choice
-
 
 
