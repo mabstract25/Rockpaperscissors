@@ -55,12 +55,16 @@ function playGame() {
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
     
-    playRound(humanSelection, computerSelection);
+    
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
+        if (i == 0) {
+            playRound(humanSelection, computerSelection);
+        } else {
         humanSelection = getHumanChoice();
         computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
+        }
     }
 
     
