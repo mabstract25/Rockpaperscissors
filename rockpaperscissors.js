@@ -57,28 +57,28 @@ function playGame() {
     
     
 
-    for (let i = 0; i < 5; i++) {
-        if (i == 0) {
-            playRound(humanSelection, computerSelection);
-        } else {
-        humanSelection = getHumanChoice();
-        computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-        }
-    }
+    // for (let i = 0; i < 99; i++) {
+    //     if (i == 0) {
+    //         playRound(humanSelection, computerSelection);
+    //     } else {
+    //     humanSelection = getHumanChoice();
+    //     computerSelection = getComputerChoice();
+    //     playRound(humanSelection, computerSelection);
+    //     }
+    // }
 
     
    
 
 
 
-    if (humanScore > computerScore) {
-            alert("You Win The Game!");
-        } else if (computerScore > humanScore) {
-            alert("You Lose The Game!");
-        } else {
-            alert("It's a Draw!");
-    };
+    // if (humanScore > computerScore) {
+    //         alert("You Win The Game!");
+    //     } else if (computerScore > humanScore) {
+    //         alert("You Lose The Game!");
+    //     } else {
+    //         alert("It's a Draw!");
+    // };
 
 };
 
