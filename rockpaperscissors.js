@@ -1,3 +1,7 @@
+const rockbutton = document.getElementById('rockButton');
+const paperbutton = document.getElementById('paperButton');
+const scissorsbutton = document.getElementById('scissorsButton');
+
 
 
 function playGame() {
@@ -6,7 +10,6 @@ function playGame() {
     let computerScore = 0;
 
     
-
     function playRound(humanChoice, computerChoice) {
         humanChoice = humanChoice.toLowerCase();
         if (humanChoice === "paper") {
@@ -52,33 +55,26 @@ function playGame() {
         console.log("Your Opponent's Score Is " + computerScore);
     } 
 
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
+    // Button Event Listeners
     
+    rockbutton.addEventListener("click", (e) => {
+        console.log("-- Human chooses: rock");
+        playRound("rock", getComputerChoice());
+        
+    });
+
+    paperbutton.addEventListener("click", (e) => {
+        console.log("-- Human chooses: paper")
+        playRound("paper", getComputerChoice());
+    });
+
+    scissorsbutton.addEventListener("click", (e) => {
+        console.log("-- Human chooses: scissors")
+        playRound("scissors", getComputerChoice());
+    });
     
 
-    // for (let i = 0; i < 99; i++) {
-    //     if (i == 0) {
-    //         playRound(humanSelection, computerSelection);
-    //     } else {
-    //     humanSelection = getHumanChoice();
-    //     computerSelection = getComputerChoice();
-    //     playRound(humanSelection, computerSelection);
-    //     }
-    // }
-
     
-   
-
-
-
-    // if (humanScore > computerScore) {
-    //         alert("You Win The Game!");
-    //     } else if (computerScore > humanScore) {
-    //         alert("You Lose The Game!");
-    //     } else {
-    //         alert("It's a Draw!");
-    // };
 
 };
 
@@ -102,12 +98,3 @@ function getComputerChoice() {
 };
 // Function returns a random Rock, Paper or Scissors
 
-// Create a new function named getHumanChoice
-function getHumanChoice() {
-    humchoice = prompt("Choose Your Weapon: Rock, Paper or Scissors?");
-    console.log("-- Human chooses: " + humchoice + " --");
-    return humchoice;
-};
-// Prompt method that loads on page load
-// Take whatever score is entered
-// Run computer choice
