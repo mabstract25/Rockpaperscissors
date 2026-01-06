@@ -1,7 +1,9 @@
 const rockbutton = document.getElementById('rockButton');
 const paperbutton = document.getElementById('paperButton');
 const scissorsbutton = document.getElementById('scissorsButton');
-
+const humanMessage = document.getElementById('human');
+const computerMessage = document.getElementById('computer');
+const resultMessage = document.getElementById('result');
 
 
 function playGame() {
@@ -14,45 +16,46 @@ function playGame() {
         humanChoice = humanChoice.toLowerCase();
         if (humanChoice === "paper") {
             if (computerChoice === "paper") {
-                console.log("DRAW!");
+                resultMessage.textContent = "DRAW!";
             }
             if (computerChoice === "rock") {
-                console.log("WIN!");
+                resultMessage.textContent = "WIN!";
                 humanScore++;
             }
             if (computerChoice === "scissors") {
-                console.log("LOSE!");
+                resultMessage.textContent = "LOSE!";
                 computerScore++;
             }
         } else if (humanChoice === "rock") {
 
             if (computerChoice === "paper") {
-                console.log("LOSE!");
+                resultMessage.textContent = "LOSE!";
                 computerScore++;
             }
             if (computerChoice === "rock") {
-                console.log("DRAW!");
+                resultMessage.textContent = "DRAW!";
             }
             if (computerChoice === "scissors") {
-                console.log("WIN!");
+                resultMessage.textContent = "WIN!";
                 humanScore++;
             }
         } else if (humanChoice === "scissors") {
 
             if (computerChoice === "paper") {
-                console.log("WIN!");
+                resultMessage.textContent = "WIN!";
                 humanScore++;
             }
             if (computerChoice === "rock") {
-                console.log("LOSE!");
+                resultMessage.textContent = "LOSE!";
                 computerScore++;
             }
             if (computerChoice === "scissors") {
-                console.log("DRAW!");
+                resultMessage.textContent = "DRAW!";
             }
         } else {};
         console.log("Your Score Is " + humanScore);
         console.log("Your Opponent's Score Is " + computerScore);
+        
     } 
 
     // Button Event Listeners
