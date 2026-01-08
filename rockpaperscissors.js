@@ -4,7 +4,8 @@ const scissorsbutton = document.getElementById('scissorsButton');
 const humanMessage = document.getElementById('human');
 const computerMessage = document.getElementById('computer');
 const resultMessage = document.getElementById('result');
-
+const humanScoreTotal = document.getElementById('humanScoreTotal');
+const computerScoreTotal = document.getElementById('computerScoreTotal');
 
 function playGame() {
     
@@ -53,26 +54,26 @@ function playGame() {
                 resultMessage.textContent = "DRAW!";
             }
         } else {};
-        console.log("Your Score Is " + humanScore);
-        console.log("Your Opponent's Score Is " + computerScore);
+        humanScoreTotal.textContent = humanScore;
+        computerScoreTotal.textContent = computerScore;
         
     } 
 
     // Button Event Listeners
     
     rockbutton.addEventListener("click", (e) => {
-        console.log("-- Human chooses: rock");
+        humanMessage.textContent = "-- Human chooses: rock"
         playRound("rock", getComputerChoice());
         
     });
 
     paperbutton.addEventListener("click", (e) => {
-        console.log("-- Human chooses: paper")
+        humanMessage.textContent = "-- Human chooses: paper"
         playRound("paper", getComputerChoice());
     });
 
     scissorsbutton.addEventListener("click", (e) => {
-        console.log("-- Human chooses: scissors")
+        humanMessage.textContent = "-- Human chooses: scissors"
         playRound("scissors", getComputerChoice());
     });
     
@@ -89,13 +90,13 @@ function getComputerChoice() {
     compchoice = Math.random();
     compchoice = Math.round(compchoice * 10) / 10
     if (compchoice >= 0.1 && compchoice <= 0.3) {
-        console.log("-- Computer chooses: rock --");
+        computerMessage.textContent = "-- Computer chooses: rock --";
         return "rock";
     } else if (compchoice >= 0.4 && compchoice <= 0.6) {
-        console.log("-- Computer chooses: paper --");
+        computerMessage.textContent = "-- Computer chooses: paper --";
         return "paper";
     } else {
-        console.log("-- Computer chooses: scissors --");
+        computerMessage.textContent = "-- Computer chooses: scissors --";
         return "scissors";
     }
 };
