@@ -56,6 +56,13 @@ function playGame() {
         } else {};
         humanScoreTotal.textContent = humanScore;
         computerScoreTotal.textContent = computerScore;
+        if (humanScore === 5) {
+            alert("Congratulations, You Win!!");
+            location.reload();
+        } else if (computerScore === 5) {
+            alert("Bad Luck, You Lose.");
+            location.reload();
+        };
         
     } 
 
@@ -77,7 +84,9 @@ function playGame() {
         playRound("scissors", getComputerChoice());
     });
     
-
+    
+        
+   
     
 
 };
